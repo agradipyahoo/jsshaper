@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Operator Overloading Demo</title>
+    <script type="text/javascript" src="math.js"></script>
+    <script type="text/javascript" src="simple-shaped.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            var outputArea = document.getElementById('testOutput');
+
+            var HTMLOutput = function(text) {
+                outputArea.innerHTML += '<div>' + text + '</div>';
+            };
+            
+            var results = opOverTest();
+            
+            for(var name in results) {
+                var result = results[name];
+                
+                HTMLOutput(result.toString());
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="testOutput"></div>
+</body>
+</html>
